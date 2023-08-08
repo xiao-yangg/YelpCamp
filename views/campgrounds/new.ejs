@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row mt-4">
+    <h1 class="text-white text-center mb-4">Share about your Campground!</h1>
+    <div class="col-6 offset-3">
+    <%# offset by 3 on each side==> center things %>
+        <form action="/campgrounds" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
+            <div class="mb-2">
+                <label class="text-white form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <%# 'name="campground[title]"' means everything sent in post request will be saved under
+                    campground; use to group content tgt %>
+            </div>
+            <div class="mb-2">
+                <label class="text-white form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+            </div>
+            <div class="mb-2">
+                <label class="text-white form-label" for="price">Price</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price-label">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="campground[price]" required>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label class="text-white form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]"
+                    required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="formFileMultiple" class="text-white form-label">Image (max. 2)</label>
+                <input class="form-control" type="file" id="formFileMultiple" multiple name="image">
+            </div>
+
+            <div class="mb-3">
+                <button class="btn btn-success btn-lg">Add Campground</button>               
+            </div>
+        </form>
+    </div>
+</div>

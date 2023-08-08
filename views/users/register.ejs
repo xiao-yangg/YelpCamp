@@ -1,0 +1,52 @@
+<% layout('layouts/frontpage') %>
+
+<header class="mb-auto">
+    <div>
+        <h3 class="float-md-left mb-1">YelpCamp</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-right">
+            <a href="/" class="nav-link" aria-current="page">Home</a>
+
+            <% if (!currentUser) {%>
+                <a href="/login" class="nav-link">Login</a>
+                <a href="#" class="nav-link active">Register</a>
+                <% } else { %>
+                    <a href="/logout" class="nav-link">Logout</a>
+                    <% } %>
+        </nav>
+    </div>
+</header>
+
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card-shadow">
+                <div class="card-body">
+                    <h1 class="card-title mb-4">Sign Up!</h1>
+                    <form action="/register" method="POST" class="validated-form mb-2" novalidate>
+                        <div class="mb-3">
+                            <input class="form-control" type="email" id="email" name="email" placeholder="Email" autofocus required>
+                            <div class="invalid-feedback">
+                                Missing field!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="text" id="username" name="username" placeholder="Username" required>
+                            <div class="invalid-feedback">
+                                Missing field!
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input class="form-control" type="password" id="password" name="password" placeholder="Password" required>
+                            <div class="invalid-feedback">
+                                Missing field!
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-success btn-block">Register</button>
+                    </form>
+                    <a href="/login">Already a laojiao?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

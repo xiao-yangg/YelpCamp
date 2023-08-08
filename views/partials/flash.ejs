@@ -1,0 +1,13 @@
+<% if (success && success.length) {%> <%# if success has a message in it; else it will be an empty array %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert" id="flash">
+        <strong><%= success %></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>
+
+<% if (error && error.length) {%>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="flash">
+        <strong><%= error %></strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<% } %>

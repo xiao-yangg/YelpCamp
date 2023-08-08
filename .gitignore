@@ -1,0 +1,4 @@
+node_modules
+.env
+
+# this will tell git to ignore 'node_modules' and '.env' file
