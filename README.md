@@ -1,5 +1,5 @@
 # YelpCamp
-Modified fullstack webapp written in mid-2021
+Full-stack webapp project completed in freshman summer 2021
 
-### Reference
+### Inspiration
 https://www.udemy.com/course/the-web-developer-bootcamp/
